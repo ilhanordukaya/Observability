@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observability.ConsoleApp", 
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9B60E854-CF84-46F5-B0D4-3C67621DAEE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "Order.API\Order.API.csproj", "{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "Order.API\Order.API.csproj", "{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry.Shared", "..\OpenTelemetry.Shared\OpenTelemetry.Shared.csproj", "{66654143-3228-488E-B1F4-5B3F2D086B68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66654143-3228-488E-B1F4-5B3F2D086B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66654143-3228-488E-B1F4-5B3F2D086B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66654143-3228-488E-B1F4-5B3F2D086B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66654143-3228-488E-B1F4-5B3F2D086B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
