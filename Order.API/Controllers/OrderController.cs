@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Mvc;
+using Order.API.OrderServices;
 
 namespace Order.API.Controllers
 {
@@ -6,14 +8,54 @@ namespace Order.API.Controllers
 	[Route("[api/controller]")]
 	public class OrderController : ControllerBase
 	{
-		[HttpGet]
-		public IActionResult Create()
+		private readonly OrderService _orderService;
+		private readonly IPublishEndpoint _publishEndpoint;
+
+		public OrderController(OrderService orderService, IPublishEndpoint publishEndpoint)
 		{
-			//var a =10;
+			_orderService = orderService;
+			_publishEndpoint = publishEndpoint;
+		}
+		[HttpPost]
+		public async Task<IActionResult> Create(OrderCreateRequestDto request)
+		{
+			var result = await _orderService.CreateAsync(request);
+
+			#region Third-party api istek örneği
+
+			//var httpClient = new HttpClient();
+
+			//var response = await httpClient.GetAsync("https://jsonplaceholder.typicode.com/todos/1");
+
+			//var content = await response.Content.ReadAsStringAsync(); 
+			#endregion
+
+
+
+			return new ObjectResult(result) { StatusCode = result.StatusCode };
+			#region Exception örneği için hazırlandı.
+
+			//var a = 10;
 			//var b = 0;
+			//var c = a / b; 
+			#endregion
 
-			//var c = a/b;
 
-			return Ok();		}
+
+		}
+
+
+		[HttpGet]
+		public async Task<IActionResult> SendOrderCreatedEvent()
+		{
+
+			// Kuyruğua mesaj gönder
+
+			await _publishEndpoint.Publish(new OrderCreatedEvent() { OrderCode = Guid.NewGuid().ToString() });
+
+			return Ok();
+
+		}
+	
 	}
 }

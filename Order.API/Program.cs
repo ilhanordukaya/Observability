@@ -3,6 +3,9 @@ using OpenTelemetry.Trace;
 using OpenTelemetry.Shared;
 
 using Order.API.OrderServices;
+using Common.Shared;
+using Microsoft.EntityFrameworkCore;
+using Order.API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +20,10 @@ builder.Services.AddOpenTelemetryExt(builder.Configuration);
 
 
 
-
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+	options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
+});
 
 
 var app = builder.Build();
@@ -30,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseMiddleware<RequestAndResponseActivityMiddleware>();
 
 app.UseAuthorization();
 

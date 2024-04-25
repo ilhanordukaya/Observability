@@ -1,5 +1,7 @@
 ﻿
+using MassTransit;
 using OpenTelemetry.Shared;
+using Order.API.Models;
 using System.Diagnostics;
 using System.Net;
 
