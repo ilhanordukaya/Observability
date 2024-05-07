@@ -1,7 +1,10 @@
 ﻿
+using Common.Shared.DTOs;
 using MassTransit;
 using OpenTelemetry.Shared;
 using Order.API.Models;
+using Order.API.RedisServices;
+using Order.API.StockServices;
 using System.Diagnostics;
 using System.Net;
 
