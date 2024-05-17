@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using Common.Shared.Events;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Order.API.OrderServices;
 
