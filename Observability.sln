@@ -9,11 +9,13 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "Order.API\Order.API.csproj", "{E47E12D2-C01F-4C9C-AC81-6446E6463FAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry.Shared", "..\OpenTelemetry.Shared\OpenTelemetry.Shared.csproj", "{66654143-3228-488E-B1F4-5B3F2D086B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetry.Shared", "..\OpenTelemetry.Shared\OpenTelemetry.Shared.csproj", "{66654143-3228-488E-B1F4-5B3F2D086B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Shared", "..\Common.Shared\Common.Shared.csproj", "{44162FBB-B9AC-4CEF-BA07-30A4EACE84E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Shared", "..\Common.Shared\Common.Shared.csproj", "{44162FBB-B9AC-4CEF-BA07-30A4EACE84E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "..\Stock.API\Stock.API.csproj", "{13BE24C5-16C4-4024-99DC-B2B47C0D992F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "..\Stock.API\Stock.API.csproj", "{13BE24C5-16C4-4024-99DC-B2B47C0D992F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "..\Payment.API\Payment.API.csproj", "{96467906-8489-4C34-9003-E77493D752CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{13BE24C5-16C4-4024-99DC-B2B47C0D992F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BE24C5-16C4-4024-99DC-B2B47C0D992F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BE24C5-16C4-4024-99DC-B2B47C0D992F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96467906-8489-4C34-9003-E77493D752CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96467906-8489-4C34-9003-E77493D752CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96467906-8489-4C34-9003-E77493D752CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96467906-8489-4C34-9003-E77493D752CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
